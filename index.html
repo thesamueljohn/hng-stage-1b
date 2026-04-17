@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Profile & Todo Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  
+  <div class="app-container">
+
+
+    <main class="dashboard-grid">
+      
+      <article data-testid="test-profile-card" class="card profile-card">
+        <div class="profile-layout">
+          <figure class="avatar-container">
+            <img src="https://avatars.githubusercontent.com/u/1?v=4" alt="User Profile Avatar" data-testid="test-user-avatar">
+          </figure>
+          
+          <div class="profile-info">
+            <header>
+              <h2 data-testid="test-user-name">Samuel John</h2>
+            </header>
+            <p data-testid="test-user-bio" class="bio-text">Frontend Developer passionate about building accessible web interfaces and scalable design systems.</p>
+            
+            <button class="time-tracker" id="announce-time-btn" aria-label="Announce current time">
+              <span class="icon-clock">⏱</span> Current Epoch Time: 
+              <span data-testid="test-user-time" class="time-mono" aria-hidden="true"></span> ms
+            </button>
+            <div id="time-announcer" class="hidden-visually" aria-live="polite"></div>
+
+            <nav aria-label="Social Links">
+              <ul data-testid="test-user-social-links" class="social-links">
+                <li><a href="https://github.com/thesamueljohn" target="_blank" rel="noopener noreferrer" data-testid="test-user-social-github">GitHub</a></li>
+                <li><a href="#" target="_blank" rel="noopener noreferrer" data-testid="test-user-social-twitter">Twitter</a></li>
+                <li><a href="#" target="_blank" rel="noopener noreferrer" data-testid="test-user-social-linkedin">LinkedIn</a></li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+
+        <div class="preferences-layout">
+          <section class="pref-section">
+            <h3>Hobbies</h3>
+            <ul data-testid="test-user-hobbies" class="tag-list">
+              <li>Open Source</li>
+              <li>UI/UX Design</li>
+              <li>Reading</li>
+            </ul>
+          </section>
+          <section class="pref-section">
+            <h3>Dislikes</h3>
+            <ul data-testid="test-user-dislikes" class="tag-list">
+              <li>Spaghetti Code</li>
+              <li>Unclear Specs</li>
+            </ul>
+          </section>
+        </div>
+      </article>
+
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
